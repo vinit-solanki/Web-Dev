@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(248, 248, 248);
+    background: linear-gradient(0deg, rgba(248, 248, 248, 1) 0%, rgba(210, 210, 210, 1) 4%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.navContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(244, 255, 0);
+    background: linear-gradient(0deg, rgba(244, 255, 0, 1) 0%, rgba(247, 1, 1, 1) 4%);
+    padding: 15px 0;
+}
+
+nav {
+    width: 100%;
+}
+
+.navList {
+    width: 100%;
+    list-style: none;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo-text {
+    font-size: 2.9rem;
+    color: rgb(208, 255, 0);
+}
+
+#navItems {
+    display: flex;
+    gap: 40px;
+}
+
+a {
+    color: rgb(216, 237, 255);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.footerBox {
+    width: 100%;
+    background: rgb(248, 248, 248);
+    background: linear-gradient(0deg, rgba(248, 248, 248, 1) 0%, rgba(108, 6, 6, 1) 4%);
+    text-align: center;
+    color: azure;
+    padding: 20px 0;
+    font-size: 1.5rem;
+}
+
+.contentBox {
+    flex: 1;
+    margin: 20px;
+    border: 1px solid black;
+    background: wheat;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.leftBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rightBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rightBox img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s linear;
+}
+
+.rightBox img:hover {
+    transform: scale(1.1);
+}
+
+h2, h3 {
+    margin-left: 2rem;
+    color: #333;
+}
+
+.leftBox .Ingredients, .leftBox .Recipe {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.leftBox ul, .leftBox ol {
+    margin-left: 40px;
+    font-size: 1.1rem;
+}
+
+.leftBox ul li, .leftBox ol li {
+    margin-bottom: 10px;
+}
+
+.leftBox ul li::before, .leftBox ol li::before {
+    margin-right: 10px;
+    color: #333;
+}

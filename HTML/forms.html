@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Demo</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <hr>
+    <form>
+        <p>
+            <label for="username">Username:</label>
+            <input id="username" type="text" placeholder="UserName" name="username"/>
+        </p>
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="E-mail" name="email"/>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input
+            type="password"
+            maxlength="50"
+            minlength="8"
+            placeholder="Password"
+            name="password"
+            />
+        </p>
+      <p>
+        <label for="tel">Phone Number:</label>
+          <input type="tel" placeholder="Mobile Number" name="number" min="10" max="10"/>
+        </p>
+        <p>
+            <label for="date">D.O.B. :</label>
+            <input type="date" placeholder="D.O.B." name="date"/>
+        </p>
+        <p>
+            <label for="color">Favorite Colours:</label>
+            <input type="color" placeholder="Color Picker" name="color">
+        </p>
+        <button>Submit</button>
+    </form>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Anything</button>
+    </form>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search On YouTube</button>
+    </form>
+     <h2>More Inputs:</h2>
+     <form action="/birds">
+      <input type="checkbox" name="agree_TOS" id="'agree">
+      <label>I agree all the terms and conditions</label>
+      <br>
+      <input type="checkbox" name="no_agree" id="NotAgree">
+      <label>I do not agree all the terms and conditions</label>
+     </form>
+     <form>
+      Select your size:
+      <input type="radio" name="rad" id="S" value="Small">
+      <label id="S">S</label>
+      <input type="radio" name="rad" id="M" value="Medium">
+      <label id="M">M</label>
+      <input type="radio" name="rad" id="L" value="Large">
+      <label id="L">L</label>
+     </form>
+     <p>
+      <label for="Qualification">Please Select Your Qualification : </label>
+      <select name="Qualification" id="Qualification">
+        <option value="12th Pass">12th Pass</option>
+        <option value="Undergraduate">Undergraduate</option>
+        <option value="Masters">Masters</option>
+        <option value="PhD.">PhD.</option>
+      </select>
+      </p>
+      <p>
+        <label id="happy_indx">How Happy Are You?</label>
+        <input type="range" id="happy_indx" name="happy_indx" value="10">
+      </p>
+      <p>
+        <label id="address">Enter your address:</label>
+        <textarea id="address" rows="2" cols="60" placeholder="Enter your Address"></textarea>
+      </p>
+      <hr>
+      <h2>Validation Form</h2>
+      <form>
+        <label for="first">Enter your first name:</label>
+        <input type="text" id="first" name="first" maxlength="10" minlength="4" required>
+        <p>
+          <label for="username">Enter your Username:</label>
+          <input type="text" id="username" minlength="5" maxlength="25">    
+        </p>
+        <p>
+          <label for="email">Your E-mail:</label>
+          <input type="email" id="email">
+        </p>
+      </form>
+      <hr>
+      <form action="">
+        <h2>Race Registration!</h2>
+        <p>
+          <label for="first">First Name:</label>
+          <input type="text" id="first" name="firstname" required>
+        <label for="last">Last Name:</label>
+        <input type="text" id="last" name="lastname" required>
+      </p>
+      Select a Race:
+      <p>
+        <input type="radio" id="opts" name="race" value="opt1">
+        <label for="opts">Fun Run 5k</label>
+        <input type="radio" id="opts" name="race" value="opt2">
+        <label for="opts">Half Marathon</label>
+        <input type="radio" id="opts" name="race" value="opt3">
+        <label for="opts">Full Marathon</label>
+      </p>
+      <p> 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="Password">Password</label>
+        <input type="password" id="Password">
+      </p>
+      <div>
+        <label for="Age">Select Age Group:</label>
+        <select name="age" id="Age">
+          <option value="under 18">Under 18</option>
+          <option value="just 18">18</option>
+          <option value="19-30">19-30</option>
+          <option value="30-50">30-50</option>
+          <option value="50+">50+</option>
+        </select>
+      </div> 
+      <button value="register">Register</button>
+    </form>
+    </body>
+  <hr>
+</html>

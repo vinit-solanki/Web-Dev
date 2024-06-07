@@ -1,0 +1,616 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(78, 75, 75);
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+}
+.main{
+    width: 100%;
+    height: 80vh;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/86742114-c001-4800-a127-c9c89ca7bbe4/IN-en-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    object-position: center;
+    background-size: max(1200px,100vw);
+}
+.p1{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+    flex-direction: column;
+    opacity: 0.77;
+    position: absolute;
+    text-align: center;
+}
+.navbar{
+    width: 100%;
+    height: 10%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 3% 5%;
+    /* background-color: rebeccapurple; */
+}
+.logo{
+    /* margin-right: 560px; */
+    justify-content: flex-start;
+}
+.logo:nth-child(2){
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+.logo:nth-child(3){
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+.main-content{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+.content-1{
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.login button{
+    margin-left: 10px;
+    font-size: x-large;
+}
+.p2{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: black;
+}
+.text-content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.text-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.text-content p{
+    text-align: start;
+    justify-content: start;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.vid-content{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+}
+.vid-content video{
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.vid-content img{
+    height: 340px;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.p3{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0;
+    background-color: black;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: black;
+}
+.vid-content2{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    margin-right: 8px;
+    padding: 10px;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: end;
+}
+.download{
+    height: 20%;
+    width: 57%;
+    background-color: black;
+    border: 1px solid grey;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-around;
+    padding: auto;
+    position: relative;
+    padding: 0 12px;
+}
+
+.down{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+.text-content2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    padding: 0 20px;
+}
+
+.text-content2 h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.text-content2 p{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    text-align: start;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.vid-content2 i{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.p4{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.text-content3{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: start;
+}
+.text-content3 h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.text-content3 p{
+    text-align: start;
+    justify-content: start;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+.p2{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: black;
+}
+input::placeholder{
+    font-weight: bold;
+    opacity: 0.5;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.text-content4{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 0 20px;
+    margin: 20px;
+}
+.text-content4 h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.text-content4 p{
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    position: relative;
+}
+.vid-content3{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+}
+.vid-content3 video{
+    height: 490px;
+    width: 360px;
+    position: absolute;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 90px;
+}
+.vid-content3 img{
+    height: 400px;
+    width:  580px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.p5{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: start;
+    gap: 10px;
+}
+.text-content4{
+    display: flex;
+    width: 50%;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+.text-content4 h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+    align-items: start;
+}
+.text-content4 p{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: start;
+    position: relative;
+}
+.vid-content4{
+    width: 50%;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.p6{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+    gap: 5px;
+}
+.p6 h1{
+    font-size: 1.9rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.q{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    height: 50px;
+    background-color: rgba(82, 82, 82, 0.443);
+    font-size: 1.4rem;
+    padding: 30px;
+    margin: 0;
+}
+
+.add{
+    margin: 6px;
+    font-size: xxx-large;
+    font-weight: 300;
+}
+.q:hover{
+    background-color: #534e4e;
+    transition: all 300ms;
+}
+.btm-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.btm-content p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.emailnbtn{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.p7{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    padding: 0;
+    padding: 15px;
+    padding-top: 40px;
+    justify-content: start;
+    align-items: start;
+    align-content: flex-start;
+    background-color: black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.call{
+    justify-content: center;
+    align-self: flex-start;
+    padding-left: 50px;
+}
+.links{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 12px;
+}
+li{
+    margin: 8px;
+    list-style-type: none;
+    text-decoration: none;
+}
+a{
+    color: #a39d9d;
+    font-size: small;
+    font-weight: 100;
+}
+.lang-select{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #4b4b4b;
+    align-content: flex-end;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.lang-select img{
+    width: 30px;
+    height: 50px;
+    background-color: transparent;
+    color: #fff;
+}
+.dropdown{
+    color: #fff;
+}
+.p7 p{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.SignIn h1{
+    width: 100%;
+    padding: 25px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    align-self: start;
+}
+.signin{
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    gap: 10px;
+}
+.email-add{
+    height: 52px;
+    width: 100%;
+    background-color: rgba(65, 62, 60, 0.712);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    font-weight: 100;
+    font-size: 0.9rem;
+    color: rgba(240, 255, 255, 0.546);
+}
+.bg-transparent{
+    border: 0;
+}
+.btns{
+    width: 45%;
+    display: flex;
+    gap: 10px;
+    padding: 5px 7px;
+    align-content: center;
+    align-self: center;
+}
+/* main{
+    width: 100%;
+    height: 80vh;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/86742114-c001-4800-a127-c9c89ca7bbe4/IN-en-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: max(1200px,100vw);
+    position: relative;
+}
+main .box{
+    height: 80vh;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+.nav{
+    display: flex;
+    height: 62px;
+    max-width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: aqua;
+}
+.left-items{
+    display: flex;
+    position: relative;
+    z-index: 10;
+    justify-content: end;
+}
+nav img{
+    color: red;
+    width: 114px;
+    height: 80vh;
+    position: relative;
+    z-index: 10;
+    font-weight: 800;
+    margin: 30px;
+}
+.sign-in-btn{
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    font-size: large;
+    border-radius: 7px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero{
+    display: flex;
+    height: calc(100% -62px);
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    gap: 23px;
+    padding: 0 30px;
+}
+.hero h1{
+    font-size: 42px;
+    font-weight: 900;
+    flex-wrap: nowrap;
+    margin-top: 110px;
+}
+.hero h3{
+    font-size: 25px;
+    font-weight: 700;
+}
+.hero p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.ipt-btn input{
+    height: 30px;
+    background-color: rgb(165, 170, 174);
+    padding: 10px;
+}
+.ipt-btn button{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.separation{
+    height: 11px;
+    background-color: gray;
+} */
