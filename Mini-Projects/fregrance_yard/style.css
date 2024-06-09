@@ -25,6 +25,9 @@ body{
     padding: 0.5rem;
     border-bottom: 1px solid rgb(199, 195, 195);
     background-color: #010b13;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 .header-content{
     max-width: 1280px;
