@@ -221,15 +221,15 @@ s.replace("existing","replacing")
 // }
 
 // Strings:
-let naam=Array.from("Vinit Solanki");
-let naamMap=naam.map((curr,idx)=>{
-    return `${curr} - ${idx}`;
-});
-console.log(naamMap);
-names=["John","Kane","Leean"]
-let mr=names.map((names)=>`Mr. ${names}`);
-console.log(names);
-console.log(mr);
+// let naam=Array.from("Vinit Solanki");
+// let naamMap=naam.map((curr,idx)=>{
+//     return `${curr} - ${idx}`;
+// });
+// console.log(naamMap);
+// names=["John","Kane","Leean"]
+// let mr=names.map((names)=>`Mr. ${names}`);
+// console.log(names);
+// console.log(mr);
 // String methods:
 /*
 .indexOf(searchString,position)
@@ -239,3 +239,30 @@ console.log(mr);
 .charAt(index from 0 or Last indexing)
 .at()->returns the character at specified index
 */
+
+//Guessing the number game:
+// let maxi=parseInt(prompt("Enter the maximum number!"));
+// while(!maxi){
+//     maxi=parseInt(prompt("Enter a valid number!"));
+// }
+// const target=Math.floor(Math.random()*maxi)+1;
+// console.log(target);
+// let guess=prompt("Enter your first guess! (Enter 'q' to quit)");
+// let attemps=1;
+// while(parseInt(guess)!==target){
+//     if(guess=='q')
+//         break;
+//     guess=parseInt(guess)
+//     if(guess>target){
+//         guess=parseInt(prompt("Too high! Enter a new guess:"))
+//         attemps++;
+//     }
+//     else if(guess<target){
+//         guess=parseInt(prompt("Too low! Enter a new guess:"))
+//         attemps++;
+//     }
+//     else{
+//         guess=prompt("Invalid guess. Please enter a number or 'q' to quit.")
+//     }
+// }
+// console.log(`You Win! It took you ${attemps} guesses`);
