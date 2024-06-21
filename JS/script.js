@@ -278,24 +278,54 @@ s.replace("existing","replacing")
 // increment();
 
 // Factory function:
-function makeBetweenFunc(min,max){
-    return function(num){
-        return num>=min && num<=max;
-    }
-}
-console.log(  makeBetweenFunc(3,13)(5));
-const isAdult=makeBetweenFunc(18,60);
-const isSenior=makeBetweenFunc(60,100);
-console.log(isAdult(18));    
-console.log(isSenior(60));
-const myMath={
-    Pie:Math.pie,
-    add:function(a,b){
-        return a+b;
-    },
-    sub:function(a,b){
-        return a-b;
-    }
-}
-console.log(myMath.Pie);
-console.log(myMath.add(2,5));
+// function makeBetweenFunc(min,max){
+//     return function(num){
+//         return num>=min && num<=max;
+//     }
+// }
+// console.log(makeBetweenFunc(3,13)(5));
+// const isAdult=makeBetweenFunc(18,60);
+// const isSenior=makeBetweenFunc(60,100);
+// console.log(isAdult(18));    
+// console.log(isSenior(60));
+// const myMath={
+//     Pie:Math.pie,
+//     add:function(a,b){
+//         return a+b;
+//     },
+//     sub:function(a,b){
+//         return a-b;
+//     }
+// }
+// console.log(myMath.Pie);
+// console.log(myMath.add(2,5));
+
+
+// const isEven= (n)=>{
+//     return n%2===0;
+// }
+// const isEven=(n)=>n%2===0;
+// console.log(isEven(4));
+// let rollDie=()=>(Math.floor(Math.random()*6)+1);
+// rollDie;
+
+// console.log("Hello");
+// setTimeout(()=>{
+//     console.log("are you still there?")
+// },2000);
+// setTimeout(()=>{
+//     console.log("I'm leaving...");
+// },3000);
+// setTimeout(()=>{
+//     console.log("Good Bye!");
+// },3500);
+
+let nums=[1,2,3,4,5,6,7,8,9,10]
+nums.filter((num)=>num%2===0).map((num)=>(console.log(num)));
+// console.log(nums.filter((num)=>num%2===0));
+console.log(nums.filter((num)=>num%2===0).map((num)=>num*2));
+
+const total=nums.reduce((acc,curr)=>{
+    return acc+curr;
+});
+console.log(total);
