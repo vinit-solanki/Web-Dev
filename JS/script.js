@@ -266,3 +266,36 @@ s.replace("existing","replacing")
 //     }
 // }
 // console.log(`You Win! It took you ${attemps} guesses`);
+// function increment(){
+//     let a=0;  //here, this a is scoped
+//     // if a is not redefined then the 
+//     // previously defined a is used here
+//     console.log(++a);
+// }
+// let a=0;
+// ++a;
+// console.log(a);
+// increment();
+
+// Factory function:
+function makeBetweenFunc(min,max){
+    return function(num){
+        return num>=min && num<=max;
+    }
+}
+console.log(  makeBetweenFunc(3,13)(5));
+const isAdult=makeBetweenFunc(18,60);
+const isSenior=makeBetweenFunc(60,100);
+console.log(isAdult(18));    
+console.log(isSenior(60));
+const myMath={
+    Pie:Math.pie,
+    add:function(a,b){
+        return a+b;
+    },
+    sub:function(a,b){
+        return a-b;
+    }
+}
+console.log(myMath.Pie);
+console.log(myMath.add(2,5));
