@@ -320,12 +320,31 @@ s.replace("existing","replacing")
 //     console.log("Good Bye!");
 // },3500);
 
-let nums=[1,2,3,4,5,6,7,8,9,10]
-nums.filter((num)=>num%2===0).map((num)=>(console.log(num)));
-// console.log(nums.filter((num)=>num%2===0));
-console.log(nums.filter((num)=>num%2===0).map((num)=>num*2));
+// let nums=[1,2,3,4,5,6,7,8,9,10]
+// nums.filter((num)=>num%2===0).map((num)=>(console.log(num)));
+// // console.log(nums.filter((num)=>num%2===0));
+// console.log(nums.filter((num)=>num%2===0).map((num)=>num*2));
 
-const total=nums.reduce((acc,curr)=>{
-    return acc+curr;
-});
-console.log(total);
+// const total=nums.reduce((acc,curr)=>{
+//     return acc+curr;
+// });
+// console.log(total);
+// ...other ->this not spread operator,it's rest
+function medals(classA,classB,...others){
+    console.log(`Class-A: ${classA}, CLass-B: ${classB}, Class-C: ${others}`);
+}
+medals(10,20,30,40,50); // Class-A: 10,
+
+const user={
+    name:"John",
+    age:30,
+    occupation:"Developer",
+    address:"California",
+    works_at:"Meta",
+    salary:"$2M"
+}
+const {name:user_name,age:user_age,user_dob='2005',...otherDetails}=user;
+console.log(user_name);
+console.log(user_age);
+console.log(user_dob);
+console.log(otherDetails);
