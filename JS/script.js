@@ -348,3 +348,20 @@ console.log(user_name);
 console.log(user_age);
 console.log(user_dob);
 console.log(otherDetails);
+/*
+Functional Expression cannot be accessed before since, they are instatiated
+when the function is called via variabel where as,
+function blocks are stored in the call stack.
+
+this keyword cannot be used directly in the arrow function
+
+Due to global scope our function gets polluted to overcome this,IIFE is used
+IIFE (Immedialtely Invoked Function Expression)
+(function fun(){....})();
+        or
+((params)=>{....})(args);
+
+value of object can be accessed by,
+myObj[key] 
+*/ 
+ 
