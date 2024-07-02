@@ -18,3 +18,17 @@ section div{
     display: flex;
     flex-direction: column;
 }
+.purple{
+    color: #7b07ff;
+}
+.border{
+    border: 3px solid grey;
+}
+.pokemons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+}
+img{
+    display: block;
+}

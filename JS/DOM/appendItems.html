@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    body{
+        background-color: #2222;
+        color: rgb(134, 139, 143);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .list{
+        background-color: #2222;
+        color: rgb(49, 50, 52);
+        display: flex;
+        flex-direction: column;
+        width: 4rem;
+        align-items: self-start;
+        justify-content: center;
+        border-radius: 1rem;
+        align-self: center;
+        padding: 1rem 3rem;
+    }
+</style>
+<body>
+    <ul class="list">
+        <li>Item 1</li>
+    </ul>
+</body>
+<script>
+    function addItem(item){
+        const li=document.createElement('li')
+        li.textContent=item
+        document.querySelector('.list').append(li)
+    }
+    function optiAddItems(item){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(item))
+        document.querySelector('.list').appendChild(li)
+    }
+    // addItem("Item 2")
+    // addItem("Item 3")
+    // addItem("Item 4")
+    // addItem("Item 5")
+    
+    optiAddItems("Item 2")
+    optiAddItems("Item 3")
+    optiAddItems("Item 4")
+    optiAddItems("Item 5")
+
+    // Editing functionality:
+    function edit(n,content){
+    const newItem=document.querySelector(`li:nth-child(${n})`)
+    const newli=document.createElement('li')
+    newli.innerHTML=content
+    newItem.replaceWith(newli)
+    }
+    edit(1,"Item 0")
+
+    // Remove
+    function remove(n){
+        const remItem=document.querySelector(`li:nth-child(${n})`)
+        remItem.remove()
+    }
+    remove(5)
+</script>
+</html>

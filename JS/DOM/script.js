@@ -33,3 +33,74 @@ if (inpt_type) {
 } else {
     console.error('No input element found.');
 }
+// *****INLINE STYLE CHANGES*****
+const h1=document.querySelector('h1');
+h1.style.fontStyle="italic";
+h1.style.fontFamily="Poppins, sans-serif";
+const paras=document.querySelectorAll('p');
+paras.forEach((para)=>{
+   para.style.fontFamily="Poppins, sans-serif";
+});
+// *****CLASS LIST********
+const parag=document.querySelectorAll("p");
+// parag.forEach((para)=>{
+//     para.getAttribute('class')
+//     para.setAttribute('class','border')
+// });
+// The better way of classlist:
+let p=0;
+parag.forEach((para)=>{
+    console.log(para.classList)
+    // first we need to add a class, if none exit
+    para.classList.add('class')
+    para.classList.add('border')
+    para.classList.remove('class')
+    console.log(` for para-${p++}:${para.classList.contains('class')}`);
+    console.log(` for para-${p++}:${para.classList.contains('border')}`);
+});
+
+// Will not work since paras is an array
+// paras.style.fontFamily="Poppins, sans-serif";
+const allLinks=document.querySelectorAll('a');
+for (let link of allLinks){
+    link.style.color='rgb(0,108,134)';
+    link.style.fontStyle="italic";
+}
+console.log(
+    window.getComputedStyle(h1)
+);
+const div=document.querySelector('div');
+console.log(div.parentElement);
+console.log(div.parentElement.parentElement);
+console.log(div.parentElement.parentElement);
+console.log(div);
+console.log(div.parentElement.children);
+console.log(img1.nextSibling);
+const divi=document.querySelector('div')
+console.log(divi.previousSibling);
+console.log(divi.nextSibling);
+console.log(document.createElement); 
+
+document.createElement('img');
+const newImg=document.createElement('img');
+console.dir(newImg)
+newImg.src="https://up.yimg.com/ib/th?id=OIP.puD7uThVLGBAHlq2QTfK4gHaFj&pid=Api&rs=1&c=1&qlt=95&w=140&h=105";
+newImg.alt="a lion in grass";
+divi.appendChild(newImg)
+newImg.classList.add('border')
+document.body.append('new text appended')
+
+// const pokediv=document.querySelector(".pokemons");
+// const baseURL='https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/';
+// for(let i=100;i<150;i++){
+//     const pokemon=document.createElement('div');
+//     const label=document.createElement('span');
+//     label.innerText=`#${i}`;
+//     const newPokImg=document.createElement('img');
+//     newPokImg.src=`${baseURL}${i}.png?raw=true`;
+//     newPokImg.alt=`pokemon-${i}`;
+//     pokediv.appendChild(newPokImg);
+//     pokemon.appendChild(label);
+//     pokediv.appendChild(pokemon);
+// }
+
