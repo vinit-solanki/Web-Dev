@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            display: flex;
+            color: aliceblue;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: linear-gradient(to right, rgb(142,29,40), rgb(86,99,146));
+            justify-content: center;
+            align-items: center;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .btn-1, .btn-2 {
+            color: aliceblue;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid black;
+            font-weight: 600;
+            box-shadow: greenyellow;
+        }
+        .colorCode {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid white;
+            border-radius: 1rem;
+            font-size: 1.1rem;
+            background-color: rgba(240, 248, 255, 0.295);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: 2.4px solid white;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>The Linear Gradient Generator</h1>
+        <div class="buttons">
+            <button class="btn-1" style="background-color: #8e1d28;">#8E1D28</button>
+            <button class="btn-2" style="background-color: #566392;">#566392</button>
+        </div>
+        <button id="copyButton" style="background-color: rgba(0, 0, 0, 0.324); padding: 0.4rem; border-radius: 0.4rem; border: 0.1px solid white;">
+            <h3 style="color: white;">Click here to Copy your code</h3>
+        </button>
+        <div class="colorCode">
+            background-color: linear-gradient(to right, rgb(142,29,40), rgb(86,99,146))
+        </div>
+    </section>
+    <script>
+        const btn1 = document.querySelector('.btn-1');
+        const btn2 = document.querySelector('.btn-2');
+        const colorCode = document.querySelector('.colorCode');
+        const cbg = document.querySelector('.container');
+        const copyButton=document.getElementById('copyButton');
+        function updateBackground() {
+            const color = `linear-gradient(to right, ${btn1.style.backgroundColor}, ${btn2.style.backgroundColor})`;
+            colorCode.innerHTML = `background-color: ${color}`;
+            cbg.style.background = color;  // Use background instead of backgroundColor
+        }
+        updateBackground();
+        function getNewHex(){
+            let myHexs='123456789abcedf';
+            let newHexCode='';
+            for(let i=0;i<6;i++){
+                let hex=Math.floor(Math.random()*(15-1+1))+1;
+                if(hex>9){
+                    hex=hex.toString();
+                    // console.log(hex);
+                    if(hex==='10') hex='a';
+                    if(hex==='11') hex='b';
+                    if(hex==='12') hex='c';
+                    if(hex==='13') hex='d';
+                    if(hex==='14') hex='e';
+                    if(hex==='15') hex='f';
+                }
+                hex=hex.toString();
+                newHexCode+=hex;
+                // console.log(newHexCode);
+            }
+            newHexCode='#'+newHexCode;
+            return newHexCode.toUpperCase();
+        }
+        btn1.addEventListener('click',function(e){
+            // console.log(e.target);
+            const ans=getNewHex();
+            console.log(ans);
+            e.target.innerHTML=ans;
+            const color = `linear-gradient(to right, ${ans}, ${btn2.style.backgroundColor})`;
+            colorCode.innerHTML = `background-color: ${color}`;
+            cbg.style.background = color;
+        });
+        btn2.addEventListener('click',function(e){
+            // console.log(e.target);
+            const ans=getNewHex();
+            console.log(ans);
+            e.target.textContent=ans;
+            const color = `linear-gradient(to right, ${btn1.style.backgroundColor}, ${ans})`;
+            colorCode.innerHTML = `background-color: ${color}`;
+            cbg.style.background = color;
+        });
+        copyButton.addEventListener('click',function(e){
+            const color=`linear-gradient(to right, ${btn1.style.backgroundColor}, ${btn2.style.backgroundColor})`;
+            navigator.clipboard.writeText(color).then(()=>alert("Copied to Clipboard!"))
+            .catch((err)=>{console.error('Failed to copy: ',err)});
+        });
+        // btn1.addEventListener('click', updateBackground);
+        // btn2.addEventListener('click', updateBackground);
+    </script>
+</body>
+</html>
