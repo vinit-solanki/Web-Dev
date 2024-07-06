@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            padding: 0.7rem;
+            border: 1px solid gray;
+            border-radius: 5px;
+            color: aliceblue;
+            background-color: rgb(23, 1, 23);
+            letter-spacing: 0.1rem;
+            font-size: 1rem;
+            margin: 1rem;
+        }
+        .btn:hover{
+            background-color: rgb(40, 17, 40);
+            transform: scaleX(1.1) scaleY(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="color"></h1>
+        <button class="btn">Change Background</button>
+    </div>
+    <script>
+        let color=document.querySelector(".color")
+        let btn=document.querySelector(".btn")
+        let container=document.querySelector(".container")
+        function updateColor(){
+            const maxNum=255;
+            const minNum=0;
+            let a=Math.floor(Math.random()*(maxNum-minNum+1))+minNum;
+            let b=Math.floor(Math.random()*(maxNum-minNum+1))+minNum;
+            let c=Math.floor(Math.random()*(maxNum-minNum+1))+minNum;
+            color.textContent=`rgb(${a},${b},${c})`
+            container.style.backgroundColor=`rgb(${a},${b},${c})`
+            document.body.style.backgroundColor=`rgb(${a},${b},${c})`
+        }
+
+        btn.addEventListener("mouseover",updateColor)
+    </script>
+</body>
+</html>
