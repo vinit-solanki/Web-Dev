@@ -250,7 +250,8 @@ font-weight: 600;
     }
 }
 .cmpy-container{
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 2rem;
@@ -260,7 +261,7 @@ font-weight: 600;
 }
 .companies{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     gap: 4rem;
     padding: 1rem;
     background-color: #051841;
@@ -286,7 +287,7 @@ font-weight: 600;
 }
 @media screen and (min-width:640px){
     .companies{
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
 /* Mobile menu styles */
@@ -426,4 +427,10 @@ text-decoration: underline;
   .contact-button {
     display: block;
   }
+}
+@media (max-width:720px) {
+    .blog{
+        display: flex;
+        flex-direction: column;
+    }    
 }
