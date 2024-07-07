@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 1rem;
+            gap: 0.1rem;
+        }
+        .container button{
+            padding: 1.2rem;
+            margin: 1rem;
+            /* border-radius: 0.7rem; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Click</button>
+    </div>
+    <!-- Example for event bubbling -->
+    <div class="container">
+        <section onclick="alert('section clicked')">
+            <p onclick="alert('p clicked')">
+                I am a Parapgraph
+                <button onclick="alert('button clicked')">Click Me</button>
+            </p>
+        </section> 
+    </div>
+    <!-- to overcome this .stopPropagation() is used with the event(e) -->
+    
+    <form action="" class="container">
+        <label for="name">Enter your Name: </label>
+        <input type="text" name="name" class="name" placeholder="Enter your name" style="margin: 1rem; padding: 0.4rem;">
+        <label for="comment" >Enter Your Comment: </label>
+        <textarea name="comment" id="comment" cols="auto" style="margin: 1rem;" class="comment"></textarea>
+        <button type="submit" style="margin: 1rem; padding: 0.7rem;" class="submit">Submit</button>
+    </form>
+    <ul class="list"></ul>
+    <script>
+        const btn = document.querySelector('button');
+        const cont=document.querySelector('.container')
+        for(let i=0;i<29;i++){
+            const newBtn=document.createElement('button')
+            newBtn.innerText="Click"
+            cont.appendChild(newBtn);
+        }
+        const makeRandColor=()=>{
+            const r=Math.floor(Math.random()*255)
+            const g=Math.floor(Math.random()*255)
+            const b=Math.floor(Math.random()*255)
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        const btns=document.querySelectorAll("button")
+        for (let btn of btns){
+            btn.addEventListener("click",function (e){
+                btn.style.backgroundColor=makeRandColor();
+                e.stopPropagation();
+            });
+        }
+        const submit=document.querySelector(".submit")
+        const list=document.querySelector(".list")
+        submit.addEventListener("click",function (e){
+            e.preventDefault();
+            const name=document.querySelector(".name")
+            const comment=document.querySelector(".comment")
+            console.log(name.value,comment.value);
+            const li=document.createElement("li")
+            // name.value.innerText.style.innerText.fontWeight="bold";
+            li.innerText=`${name.value} says,\n ${comment.value}`
+            list.appendChild(li)
+            name.value='';
+            comment.value='';
+        });
+    </script>
+</body>
+</html>
