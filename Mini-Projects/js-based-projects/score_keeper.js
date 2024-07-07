@@ -107,14 +107,17 @@ function checkWinner() {
         if (scr1 > scr2) {
             bt1.style.backgroundColor = "green";
             bt2.style.backgroundColor = "red";
+            resetGame();
         } 
         else if (scr2 > scr1) {
             bt1.style.backgroundColor = "red";
             bt2.style.backgroundColor = "green";
+            resetGame();
         } 
         else {
             bt1.style.backgroundColor = "green";
             bt2.style.backgroundColor = "green";
+            resetGame();
         }
     }
 }
