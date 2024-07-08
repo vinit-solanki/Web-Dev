@@ -78,7 +78,7 @@ document.querySelector("#max-players").addEventListener('change', function() {
 bt1.addEventListener('click', function(e) {
     if (scr1 < limit && scr2 < limit) {
         document.querySelector("#p1Score").innerHTML = ++scr1;
-        checkWinner();
+        checkWinner(); 
     }
 });
 
@@ -107,17 +107,17 @@ function checkWinner() {
         if (scr1 > scr2) {
             bt1.style.backgroundColor = "green";
             bt2.style.backgroundColor = "red";
-            resetGame();
+            // resetGame();
         } 
         else if (scr2 > scr1) {
             bt1.style.backgroundColor = "red";
             bt2.style.backgroundColor = "green";
-            resetGame();
+            // resetGame();
         } 
         else {
             bt1.style.backgroundColor = "green";
             bt2.style.backgroundColor = "green";
-            resetGame();
+            // resetGame();
         }
     }
 }
