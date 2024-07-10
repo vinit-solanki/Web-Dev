@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100vh;
+        width: 100vw;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // const fakeReqPromise=(url)=>{
+      //     return new Promise((resolve,reject)=>{
+      //         const delay=Math.floor(Math.random()*(4500))+500
+      //         setTimeout(()=>{
+      //             if(delay>4000){
+      //                 reject("Connection Timeout :(")
+      //             }
+      //             else{
+      //                 resolve(`Data from ${url}`)
+      //             }
+      //         },delay)
+      //     })
+      // }
+      // fakeReqPromise('yelp.com/api/coffe/pg1')
+      // .then((data)=>{
+      //     console.log('success page(1)')
+      //     console.log(data);
+      //     fakeReqPromise('yelp.com/api/coffee/pg2')
+      //     .then((data)=>{
+      //         console.log('success page(2)')
+      //         console.log(data);
+      //         fakeReqPromise('yelp.com/api/coffee/pg3')
+      //         .then((data)=>{
+      //             console.log('success page(3)')
+      //             console.log(data)
+      //         })
+      //         .catch((err)=>{
+      //             console.log('error page(3)')
+      //             console.log(err);
+      //         })
+      //     })
+      //     .catch((err)=>{
+      //         console.log("Error, page(2)");
+      //         console.log(err);
+      //     })
+      // })
+      // .catch((err)=>{
+      //     console.log("Error, page(1)");
+      //     console.log(err);
+      // })
+
+      // Creating  a Promise:
+      // const fakeRequest=((url)=>{
+      //     return new Promise((resolve,reject)=>{
+      //         setTimeout(()=>{
+      //             if(Math.random()>0.7){
+      //                 resolve('Your fake data here')
+      //             }
+      //             reject('Request Error!')
+      //         },1000)
+      //     })
+      // });
+      // fakeRequest('/link/1')
+      // .then((data)=>{
+      //     console.log("Done with Request!");
+      //     console.log(data);
+      // })
+      // .catch((err)=>{
+      //     console.log("Error");
+      //     console.log(err);
+      // })
+      // const delayedColorChange=(color,delay)=>{
+      //     return new Promise((resolve,reject)=>{
+      //         setTimeout(()=>{
+      //             document.body.style.backgroundColor=color
+      //             resolve('Color Changed!')
+      //         },delay);
+      //     })
+      // }
+      // delayedColorChange('red',100)
+      // .then(()=>
+      // delayedColorChange('yellow',1000))
+      // .then(()=>
+      // delayedColorChange('green',1000))
+
+      // const xhr=new XMLHttpRequest()
+      // xhr.open('GET','https://jsonplaceholder.typicode.com/users')
+      // // for continouse recording
+      // xhr.onreadystatechange=function(){
+      //     console.log(xhr.readyState);
+      //     if(xhr.readyState===4){
+      //         const data=JSON.parse(this.responseText)
+      //         console.log(typeof(data));
+      //         console.log(data[0].name);
+      //         console.log(this.responseText);
+      //     }
+      // }
+      // console.log(xhr.readyState);
+      // xhr.send()
+
+    //   const xhr = new XMLHttpRequest();
+    //   xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+    //   xhr.onreadystatechange = function () {
+    //     console.log(xhr.readyState);
+    //     if (xhr.readyState === 4) {
+    //       const data = JSON.parse(this.responseText);
+    //       console.log(typeof data);
+    //       console.log(data);
+    //       for (i of data) {
+    //         console.log(`Emp ID: ${i.id}, Emp Name: ${i.username}`);
+    //       }
+    //     }
+    //   };
+    //   xhr.send();
+
+      const promiseOne = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          console.log("Async task 1 is completed");
+          resolve();
+        }, 1000);
+      });
+      promiseOne.then(function () {
+        console.log("Promise is connected to .then(), Promise One is resolved");
+      });
+      const promiseTwo = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          console.log("Async task 2 is completed");
+          let error = true;
+          if (!error) {
+            resolve({ username: "Jakcob", password: "Christiana00" });
+          } else {
+            reject("Error: Something went wrong!");
+          }
+        }, 1000);
+      });
+      promiseTwo
+        .then((user) => {
+          console.log(user);
+          return user.username;
+        })
+        .then((user) => {
+          console.log(user.username);
+          console.log(user.password);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => {
+          console.log("Finally, the Promise Process is done.");
+        });
+      const promiseThree = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          let error = false;
+          if (!error) {
+            resolve({ username: "Danny", password: "Snow69" });
+          } else {
+            reject("ERROR: Something went wrong!");
+          }
+        }, 1000);
+      });
+      promiseThree
+        .then((user) => {
+        //  console.log(user);
+          return user;
+        })
+        .then((user) => {
+          console.log(user); 
+          return user;
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => {
+          console.log("Finally, Process of Promise 3 done.");
+        });
+        async function cosumePromiseFour(){
+            try{
+                const resp = await promiseThree
+                console.log(resp);
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        cosumePromiseFour();
+        async function getAllUsers(){
+            try{
+                // const resp= fetch("https://jsonplaceholder.typicode.com/users")
+                // Will give error if await no used
+                const resp = await fetch("https://jsonplaceholder.typicode.com/users")
+                const data=await resp.json();
+                console.log(data);
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        getAllUsers();
+        // Alternative and better approach of async/await functions
+        // Since, fetch return a promise
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((resp) => {
+            return resp.json()
+        })
+        .then((data)=>{
+            console.log(data);
+        })
+        .catch((err)=>console.log(err))
+        .finally(()=>{
+            console.log("Finally, Process of Promise 3 done.");
+        })
+
+    </script>
+  </body>
+</html>
