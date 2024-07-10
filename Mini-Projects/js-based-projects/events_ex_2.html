@@ -12,18 +12,34 @@
         }
         body{
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
             background-color: #606060;
             width: 100%;
             height: 100%;
+            /* transition: 1s background-color; */
         }
         div{
             display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             flex-wrap: wrap; 
+        }
+        .output{
+            justify-content: center;
+            align-items: center;
+            background-color: #6060604e;
+            color: aliceblue;
         }
     </style>
 </head>
 <body>
-    <div>
+    <!-- <div>
     <img src="https://plus.unsplash.com/premium_photo-1719523087603-16021087cac1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ5fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D" alt="">
     <img src="https://plus.unsplash.com/premium_photo-1719337677752-2d184073ae4a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDUxfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D" alt="">
     <img src="https://plus.unsplash.com/premium_photo-1683121976176-6c166179b0ea?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY1fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D" alt="">
@@ -32,18 +48,72 @@
     <img src="https://plus.unsplash.com/premium_photo-1700551825357-35e2594f9b50?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDg4fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D" alt="">
     </div>
     <button>Restore</button>
+     -->
+    <div>
+        <!-- <input type="text" id="myInput" placeholder="Type something....">
+        <div class="output">
+            <p class="keyPressed">Key Pressed:</p>
+            <p class="keyCode">Key Code:</p>
+            <p class="charCode">Char Code:</p>
+            <p class="eventType">Event Type:</p>
+        </div> -->
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+    </div>
     <script>
-        const images = document.querySelectorAll('img');
-        const rsto = document.querySelector("button")
-        for (let img of images){
-            img.addEventListener('dblclick', function(){
-                // img.style.display = 'none';
-                img.remove();
-            });
-            rsto.addEventListener("click",function(){
-                images.append(img)
-            });
+        // const images = document.querySelectorAll('img');
+        // const rsto = document.querySelector("button")
+        // for (let img of images){
+        //     img.addEventListener('dblclick', function(){
+        //         // img.style.display = 'none';
+        //         img.remove();
+        //     });
+        //     rsto.addEventListener("click",function(){
+        //         images.append(img)
+        //     });
+        // }
+        // setInterval(()=>{
+        //         document.body.style.backgroundColor="red"
+        // },1000);
+        // setInterval(()=>{
+        //     document.body.style.backgroundColor="yellow"
+        // },2000);
+        // setInterval(()=>{
+        //     document.body.style.backgroundColor="green"
+        // },3000);
+        // const keyP=document.querySelector(".keyPressed")
+        // const keyC=document.querySelector(".keyCode")
+        // const charC=document.querySelector(".charCode")
+        // const eType=document.querySelector(".eventType")
+        // const input=document.querySelector("#myInput")
+        // input.addEventListener('keydown',function(e){
+        //     keyP.textContent=`Key Pressed: ${e.key}`
+        //     keyC.textContent=`Key Code: ${e.code}`
+        //     charC.textContent=`Char Code: ${e.key.charCodeAt(0)}`
+        //     eType.textContent=`Event Type: ${e.type}`
+        //     console.log(e.target);
+        // });
+        // input.addEventListener("keyup",function(e){
+        //     eType.textContent=`Event Type: ${e.type}`
+        // });
+        function getRandColor(){
+            let r=Math.floor(Math.random()*256)
+            let g=Math.floor(Math.random()*256)
+            let b=Math.floor(Math.random()*256)
+            return `rgb(${r},${g},${b})`
         }
-    </script>
+        const start=document.querySelector(".start")
+        const stop=document.querySelector(".stop")
+        let interval;
+        start.addEventListener("click",function(){
+            if(!interval){interval=setInterval(function(){
+                document.body.style.backgroundColor=getRandColor()
+            },1000)}
+        });
+        stop.addEventListener("click",function(){
+            clearInterval(interval)
+            interval=null
+        })
+        </script>
 </body>
 </html>
