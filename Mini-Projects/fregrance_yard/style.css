@@ -10,7 +10,7 @@
     --accent-color: #bcc6d6;
     --text-color: #ffffff;
     --link-color: #2563eb;
-    --background-color: #091B2A;
+    --background-color: #01091c;
     --light-gray: #f0f0f0;
     --gray: #808080;
     --dark-gray: #555;
@@ -321,7 +321,7 @@ font-weight: 600;
     grid-template-columns: repeat(1,1fr);
 }
 .product {
-    background-color: #1f1f1f; /* Dark background color */
+    background-color: #3d0101; /* Dark background color */
     border-radius: 0.5rem; /* Rounded corners */
     padding: 1.5rem;
     text-align: center;
