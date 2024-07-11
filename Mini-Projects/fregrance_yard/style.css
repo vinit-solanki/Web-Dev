@@ -17,6 +17,7 @@
 }
 body{
     height: 100vh;
+    width: 100vw;
     text-align: center;
     background-color: var(--background-color);
     /* padding: 2rem; */
@@ -262,7 +263,7 @@ font-weight: 600;
 .companies{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    gap: 4rem;
+    gap: 1.7rem;
     padding: 1rem;
     background-color: #051841;
     border: none;
@@ -284,6 +285,8 @@ font-weight: 600;
 }
 .company-text{
     font-size: 1rem;
+    text-align: justify;
+    /* text-align: start; */
 }
 @media screen and (min-width:640px){
     .companies{
@@ -315,7 +318,7 @@ font-weight: 600;
 }
 .products{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
 }
 .product {
     background-color: #1f1f1f; /* Dark background color */
@@ -325,11 +328,35 @@ font-weight: 600;
     margin: 1rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
+.pricings{
+    background-color: #1f1f1f; /* Dark background color */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */ 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.08);   
+}
+.pricings:hover{
+    background-color: #274156; /* Darker purple on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1), 
+                0 4px 6px rgba(0, 0, 0, 0.08);                
+    transform: translateY(2px); /* Slightly move button down */
+    color: #cfd0ff;
+}
 
+.pricings:active {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    transform: translateY(2px); /* Slightly move button down */
+}
 .product img {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     margin-bottom: 1rem; /* Space between image and text */
 }
 
@@ -357,6 +384,7 @@ font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: start;
   }
   
 .blog {
@@ -414,6 +442,7 @@ text-decoration: underline;
     justify-content: center;
     align-items: center;
     background-color: #051841;
+    color: var(--text-color);
 }
 
 @media (min-width: 768px) {
@@ -433,4 +462,8 @@ text-decoration: underline;
         display: flex;
         flex-direction: column;
     }    
+}
+ul li{
+    list-style: none;
+    color: var(--primary-color);
 }
