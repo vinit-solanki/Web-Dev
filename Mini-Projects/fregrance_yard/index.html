@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fragrance Yard</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,34 +11,29 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
-    <div class="header">
-      <header class="header-content">
-        <a href="#" class="logo">
-          <span class="logo-text">FragranceYard</span>
-        </a>
-        <nav class="nav">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#features" class="nav-link">Products</a>
-          <a href="#pricing" class="nav-link">Feedbacks</a>
-          <a href="#blog" class="nav-link">About Us</a>
-          <a href="#about" class="nav-link">Contact</a>
-        </nav>
-        <a href="#contact" class="contact-button"> Contact Us </a>
-        <button class="menu-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
-          </svg>
-        </button>
-      </header>
-    </div>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <span class="logo-text">FragranceYard</span>
+            </a>
+            <nav class="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Products</a>
+                <a href="#pricing" class="nav-link">Feedbacks</a>
+                <a href="#blog" class="nav-link">About Us</a>
+            </nav>
+            <a href="contactnorder.html" class="contact-button" id="contact">Contact Us</a>
+            <button class="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
     <div class="content">
-      <section class="main-section">
+      <section class="main-section" id="home">
         <div class="content-left">
           <p class="section-label">Don’t trust your EX, Trust us.</p>
           <h1 class="section-title">Your Fragrance, Our Responsibility.</h1>
@@ -48,7 +43,7 @@
             Fragrance journey.
           </p>
           <div class="button-group">
-            <a href="#start" class="start-button">Order Now</a>
+            <a href="contactnorder.html" class="start-button">Order Now</a>
           </div>
         </div>
         <div class="content-right">
@@ -59,11 +54,11 @@
       </section>
     </div>
 
-    <div class="product-container">
-      <h1 style="color: aliceblue">Our Products</h1>
-      <div class="products">
-        <div class="pricings" style="text-align: center; justify-content: center; display: flex; justify-content: space-between;">
-          <h2 style="color: var(--accent-color); display: inline;">Pricings</h2>
+    <div class="product-container" id="features">
+      <h1 style="color: aliceblue;">Our Products</h1>
+      <hr>
+      <h2 style="color: var(--accent-color); display: inline-block;">Pricings</h2>
+      <div class="pricings" style="text-align: center; justify-content: center; display: flex; justify-content: space-evenly;">
           <div class="mls" style="display: flex; flex-direction: column; text-align: start; color: antiquewhite; ">
             <div class="ml">20ML </div>
             <div class="ml">10ML </div>
@@ -79,45 +74,46 @@
             <div>₹ 299 </div>
           </div>         
         </div>
+        <div class="products">
         <div class="product">
           <img
-            src="3.png"
+            src="7.png"
             alt=""
           />
           <div class="product-name">Black Berry</div>
         </div>
         <div class="product">
           <img
-            src="4.png"
+            src="8.png"
             alt=""
           />
           <div class="product-name">Madrax</div>
         </div>
         <div class="product">
           <img
-            src="5.png"
+            src="9.png"
             alt=""
           />
           <div class="product-name">Bare Vanilla</div>
         </div>
         <div class="product">
           <img
-            src="6.png"
+            src="10.png"
             alt=""
           />
           <div class="product-name">Gucci Flora</div>
         </div>
-        <div class="product">
+        <!-- <div class="product">
           <img
             src="blackBerry.jpg"
             alt=""
           />
           <div class="product-name">Lorem, ipsum.</div>
           <div class="product-price">Rs.399/-</div>
-        </div>
+        </div> -->
       </div>
     </div>
-    <div class="cmpy-container">
+    <div class="cmpy-container" id="pricing">
       <h1>Our Feedbacks</h1>
       <div class="companies">
         <div class="company">
@@ -166,7 +162,7 @@
         </div>
       </div>
     </div>
-    <div class="blog-container">
+    <div class="blog-container" id="blog">
       <div class="blog">
         <div class="blog-left">
           <div class="blog-post">
@@ -205,12 +201,12 @@
       </div>
     </div>
 
-    <div class="about-container">
-      <h2 class="about-heading">Contact us</h2>
+    <div class="about-container" >
+      <h2 class="about-heading" id="contact">Contact us</h2>
       <div class="about-content">
-        <ul>
+        <ul class="spacer">
           <li>Whatsapp Number :- 9594696866</li>
-          <li><img src="whtsapqr.png" alt="" /></li>
+          <li><img src="whtsapqr.png" alt="" class="rise-up-button" /></li>
         </ul>
       </div>
     </div>

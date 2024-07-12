@@ -1,11 +1,16 @@
-// Select elements for JavaScript manipulation
-const nav = document.querySelector('.nav');
-const menuButton = document.querySelector('.menu-button');
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButton = document.querySelector('.menu-button');
+  const nav = document.querySelector('.nav');
 
-// Function to toggle mobile menu visibility
-function toggleMenu() {
-  nav.classList.toggle('nav-active');
-}
+  menuButton.addEventListener('click', function() {
+      nav.classList.toggle('nav-active');
+  });
 
-// Event listener for menu button click
-menuButton.addEventListener('click', toggleMenu);
+  // Optional: Close the menu when a link is clicked
+  document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+          nav.classList.remove('nav-active');
+      });
+  });
+});
