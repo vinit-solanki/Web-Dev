@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        // Diff Methods to http requests and fetch api :
+        // 1. Making XML requests
+        const req = new XMLHttpRequest();
+        req.onload = function (){
+            console.log("It Loaded!!");
+            console.log("URL: ",this.responseURL);
+            console.log("XML: ",JSON.stringify(this.responseXML));
+            console.log("Text: ",JSON.parse(this.responseText));
+            console.log("Type: ",JSON.stringify(this.responseType));
+        }
+        req.onerror = function (){
+            console.log("Error");
+            console.log(this.responseText);
+        }
+        req.open('GET', 'https://swapi.dev/api/people/1/');
+        req.send();
+
+        // 2. Fetching API
+        fetch("https://swapi.dev/api/people/1/")
+        .then((res)=>{
+            console.log("Response throigh fetch: ",res);
+            return res.json();
+        })
+        .then((data)=>{
+            console.log("Data: ",data);
+        })
+        .catch((err)=>{
+            console.log("Error: ",err);
+        })
+
+        // 3. AXIOS :
+        axios.get("https://swapi.dev/api/people/1/")
+        .then((res)=>{
+            console.log("Response through axios: ",res);
+        })
+        .then((data)=>{
+            console.log("Data: ",data);
+        })
+        .catch((err)=>{
+            console.log("Error: ",err);
+        })
+
+        // Using axios with async :
+        const getCharacter= async (id)=>{
+            try{
+                // const res = await fetch(`https://swapi.dev/api/people/${id}/`)
+                // const data = await res.json();
+                const res = await axios.get(`https://swapi.dev/api/people/${id}/`)
+                console.log(`Data of Character no. ${id}:`);
+                console.log("Data: ",res.data);
+            } catch(err){
+                console.log("Error: ",err);
+            }
+        }
+        getCharacter(2);
+        const addNewJoke = async () =>{
+            const jokeText = await getDadJoke();
+            const newLI= document.createElement('li')
+            newLI.textContent = jokeText;
+            document.querySelector('#jokes').appendChild(newLI);
+        }
+        const getDadJoke = async ()=>{
+            try{
+            const config = {headers: {Accept: `application/json`}}
+            const res = await axios.get(`https://icanhazdadjoke.com/`, config)
+            console.log("Dad Joke: ",res.data.joke);
+            } catch(e){
+                console.log("Error: ",e);
+            }
+        }
+        document.querySelector("but ton").addEventListener('click',addNewJoke);
+        getDadJoke();
+    </script>
+</body>
+</html>
