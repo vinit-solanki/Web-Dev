@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Show Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 1rem;
+            align-items: center;
+            background-color: rgb(82, 4, 4);
+        }
+        .outputs{
+            width: 100%;
+            height: 100vh;
+            align-content: center;
+            border: 1px solid linear-gradient(#d9360d, #d0c908); /* Apply gradient background */
+        }
+        .outputs img{
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+        .gradient-text {
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(to right, #d9360d, #d0c908); /* Apply gradient background */
+            background-clip: text; /* Clip the background to the text */
+            -webkit-background-clip: text; /* Clip the background to the text */
+            -webkit-text-fill-color: transparent; /* Make the text color transparent */
+            position: relative; /* Position relative for shadow effect */
+            text-shadow: 2px 2px 5px rgba(229, 9, 9, 0.3), 
+                         2px 2px 4px rgba(193, 245, 4, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="gradient-text">TV Show Search</h1>
+        <form>
+            <div class="control" style="display: flex; gap: 1rem;">
+                <input class="input is-danger" type="text" placeholder="Search TV Show"/>
+                <button class="button is-alert">
+                    Search
+                </button>
+            </div>
+        </form>
+        <div class="outputs">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const form = document.querySelector("form");
+        const input = document.querySelector("input")
+        const outputs = document.querySelector('.outputs')
+        input.addEventListener('keydown',function(){
+            if(input.value===''){
+                outputs.innerHTML = ''                
+            }
+        })
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            try {
+                const input = document.querySelector('input').value;
+                console.log(input);
+                const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${input}`)
+                console.log(res.data);
+                makeImages(res.data);
+            } catch (e) {
+                console.log("Error: ", e);
+            }
+
+        });
+
+        const makeImages = (shows) => {
+            for (let show of shows) {
+                if (show.show.image) {
+                    const img = document.createElement('img');
+                    img.src = show.show.image.medium;
+                    outputs.appendChild(img)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
