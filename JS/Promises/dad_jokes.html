@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dad Jokes</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    body,
+    html {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(147, 0, 0);
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: antiquewhite;
+    }
+    button {
+      padding: 0.7rem;
+      border: 1px solid black;
+      border-radius: 1rem;
+      color: aliceblue;
+      background-color: rgba(240, 248, 255, 0.253);
+      font-size: 1.2rem;
+    }
+    button:hover {
+      background-color: brown;
+    }
+    .joke {
+      padding: 1.2rem;
+      margin: 1rem;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-size: 1.2rem;
+      font-style: italic;
+      background-color: rgba(250, 235, 215, 0.596);
+      color: rgb(1, 1, 78);
+      border: 1px solid seashell;
+      border-radius: 0.7rem;
+      transition: 2ms;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <section class="joke">Joke Loading...</section>
+      <button class="getJokeBtn">Get Joke</button>
+    </div>
+    <script>
+      const joke = document.querySelector(".joke");
+      const btn = document.querySelector(".getJokeBtn");
+      const apiUrl = "https://icanhazdadjoke.com/";
+
+      // Using fetch API:
+      // const getJoke = () => {
+      //   fetch(apiUrl, {
+      //     headers: {
+      //       Accept: "application/json"
+      //     }
+      //   })
+      //   .then((res) => {
+      //     return res.json()
+      // })
+      //   .then((data) => {
+      //     joke.textContent = data.joke;
+      //   })
+      //   .catch((err) => {
+      //     joke.textContent = "Oops! Something went wrong.";
+      //     console.error(err);
+      //   });
+      // };
+
+      // Using Async functions:
+    //   async function getJoke() {
+        const getJoke =  async ()=>{
+        try {
+          const res = await fetch(apiUrl, {
+            headers: {
+              Accept: "application/json",
+            },
+          });
+          // console.log(res);
+          const data = await res.json();
+          joke.innerHTML = data.joke;
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      getJoke();
+      btn.addEventListener("click", getJoke);
+    </script>
+  </body>
+</html>

@@ -150,7 +150,7 @@ s.replace("existing","replacing")
 // colors.forEach(function(ele,indx,arr){
 //     console.log(`${ele} - ${indx}`);
 // });
- 
+
 // colors.map((ele,idx,colors)=>{
 //     console.log(`${ele} - ${idx}`);
 // });
@@ -169,7 +169,7 @@ s.replace("existing","replacing")
 // console.log(nums)
 
 // nums.splice(nums.length,0,7)
-// console.log(nums);  
+// console.log(nums);
 
 // const mnths=["Jan","Mar","Apr",
 //     "June","July"
@@ -196,7 +196,7 @@ s.replace("existing","replacing")
 //     {name:"Chain",price:46},
 //     {name:"Tie",price:60},
 // ];
-// // Products greater then 50 and less than 120 
+// // Products greater then 50 and less than 120
 // const flteProduct=products.filter((ele)=>{
 //     if(ele.price>=50&&ele.price<=120)
 //     return ele.name
@@ -268,7 +268,7 @@ s.replace("existing","replacing")
 // console.log(`You Win! It took you ${attemps} guesses`);
 // function increment(){
 //     let a=0;  //here, this a is scoped
-//     // if a is not redefined then the 
+//     // if a is not redefined then the
 //     // previously defined a is used here
 //     console.log(++a);
 // }
@@ -286,7 +286,7 @@ s.replace("existing","replacing")
 // console.log(makeBetweenFunc(3,13)(5));
 // const isAdult=makeBetweenFunc(18,60);
 // const isSenior=makeBetweenFunc(60,100);
-// console.log(isAdult(18));    
+// console.log(isAdult(18));
 // console.log(isSenior(60));
 // const myMath={
 //     Pie:Math.pie,
@@ -299,7 +299,6 @@ s.replace("existing","replacing")
 // }
 // console.log(myMath.Pie);
 // console.log(myMath.add(2,5));
-
 
 // const isEven= (n)=>{
 //     return n%2===0;
@@ -330,24 +329,24 @@ s.replace("existing","replacing")
 // });
 // console.log(total);
 // ...other ->this not spread operator,it's rest
-function medals(classA,classB,...others){
-    console.log(`Class-A: ${classA}, CLass-B: ${classB}, Class-C: ${others}`);
-}
-medals(10,20,30,40,50); // Class-A: 10,
+// function medals(classA,classB,...others){
+//     console.log(`Class-A: ${classA}, CLass-B: ${classB}, Class-C: ${others}`);
+// }
+// medals(10,20,30,40,50); // Class-A: 10,
 
-const user={
-    name:"John",
-    age:30,
-    occupation:"Developer",
-    address:"California",
-    works_at:"Meta",
-    salary:"$2M"
-}
-const {name:user_name,age:user_age,user_dob='2005',...otherDetails}=user;
-console.log(user_name);
-console.log(user_age);
-console.log(user_dob);
-console.log(otherDetails);
+// const user={
+//     name:"John",
+//     age:30,
+//     occupation:"Developer",
+//     address:"California",
+//     works_at:"Meta",
+//     salary:"$2M"
+// }
+// const {name:user_name,age:user_age,user_dob='2005',...otherDetails}=user;
+// console.log(user_name);
+// console.log(user_age);
+// console.log(user_dob);
+// console.log(otherDetails);
 /*
 Functional Expression cannot be accessed before since, they are instatiated
 when the function is called via variabel where as,
@@ -363,5 +362,54 @@ IIFE (Immedialtely Invoked Function Expression)
 
 value of object can be accessed by,
 myObj[key] 
-*/ 
- 
+*/
+
+// Classes Practice:
+class Color {
+  constructor(r, g, b, name) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+  }
+  rgb() {
+    const { r, g, b } = this;
+    return `rgb(${r},${g},${b})`;
+  }
+  hex() {
+    const { r, g, b } = this;
+    return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+  }
+  name() {
+    return this.name;
+  }
+}
+const color = new Color(255, 0, 0, "Red");
+console.log(color.rgb());
+console.log(color.hex());
+console.log(color.name);
+
+// extends and super keyword:
+class Cat {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  speak() {
+    console.log(`${this.name} says meow`);
+  }
+}
+class Kitten extends Cat {
+  constructor(name, age, teeth, wool) {
+    super(name, age);
+    this.teeth = teeth;
+    this.wool = wool;
+  }
+  catchMouse() {
+    console.log(`${this.name} catches mouse`);
+  }
+}
+const cat1 = new Kitten('Daisy',7,10,"White")
+console.log(cat1.name);
+cat1.speak();
+cat1.catchMouse();
