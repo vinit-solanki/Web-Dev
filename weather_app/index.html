@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.1/css/bulma.min.css"
+    integrity="sha512-dF4b2QV/0kq+qlwefqCyb+edbWZ63ihXhE4A2Pju3u4QyaeFzMChqincJsKYwghbclpLE92jPb9yaz/LQ8aNlg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/bulma" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="container">
+        <div class="main-content">
+        <div class="field" style="margin: 0.4rem;">
+          <p class="control has-icons-left">
+            <input
+              class="input"
+              type="address"
+              placeholder="Enter your location..."
+            />
+            <button class="icon is-medium is-left">
+              <i class="ri-search-line"></i>
+            </button>
+          </p>
+        </div>
+        <div class="weather-content" style="color: aliceblue;">
+          <h2 class="location" style="font-size: 1.5rem;">London, United Kingdom</h2>
+          <h3 class="time-date" style="font-size: 1.1rem;">Friday, February 23, 2024 at 10:37 AM</h3>
+          <button class="current-weather" style="background-color: black; border-radius: 1.4rem; color: aliceblue; padding: 1rem; text-transform: capitalize;">Clouds</button>
+          <img class="current-weather-img" src="" alt="">
+          <h1 class="current-temp" style="font-size: 1.9rem;">278&deg</h1>
+          <div
+            class="min-max-temp"
+            style="display: flex; flex-direction: row; justify-content: space-between; font-size: 1.2rem; gap: 1.5rem;"
+          >
+            <p class="min-temp">Min: 277&deg</p>
+            <p class="max-temp">Max: 279&deg</p>
+          </div>
+        </div>
+        <div class="attributes">
+          <div class="attribute">
+            <img src="hot.png" alt="" class="attribute-img" />
+            <div class="attribute-details">
+              <p class="attribute-name">Feels Like</p>
+              <p class="attribute-value">279&deg</p>
+            </div>
+          </div>
+          <div class="attribute">
+            <img src="water.png" alt="" class="attribute-img" />
+            <div class="attribute-details">
+              <p class="attribute-name">Humidity</p>
+              <p class="attribute-value">89%</p>
+            </div>
+          </div>
+          <div class="attribute">
+            <img src="wind.png" alt="" class="attribute-img" />
+            <div class="attribute-details">
+              <p class="attribute-name">Wind</p>
+              <p class="attribute-value">4.56 m/s</p>
+            </div>
+          </div>
+          <div class="attribute">
+            <img src="barometer.png" alt="" class="attribute-img" />
+            <div class="attribute-details">
+              <p class="attribute-name">Pressure</p>
+              <p class="attribute-value">963 hPg</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
