@@ -8,7 +8,7 @@ function RollDie(){
 } 
 function DiceRolls(){
   return( 
-  <>
+  <> 
   <RollDie/>
   <RollDie/>
   <RollDie/>
@@ -21,7 +21,7 @@ function App() {
       <Greet/>
       <DiceRolls/>
       <LoginForm />
-      <GetPokemon />
+      <GetPokemon /> 
     </>
   );
 }
