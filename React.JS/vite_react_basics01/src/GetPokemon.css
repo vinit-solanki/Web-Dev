@@ -1,0 +1,13 @@
+.GetPokemon{
+    margin-top: 2rem;
+    border: 1px solid white;
+    border-radius: 2rem;
+    justify-content: center;
+    width: 300px;
+}
+.GetPokemon img{
+    width: 150px;
+}
+h2{
+    color: blueviolet;
+}

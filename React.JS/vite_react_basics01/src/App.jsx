@@ -1,6 +1,7 @@
 import './App.css';
 import Greet from './greet.jsx'; // Ensure the component is correctly imported
 import LoginForm from './loginForm.jsx'; // Ensure the component is correctly imported
+import GetPokemon from './RandomPokemon.jsx';
 function RollDie(){
   let a = Math.floor(Math.random()*6)+1;
   return <h3>Dice Roll: {a}</h3>;
@@ -20,6 +21,7 @@ function App() {
       <Greet/>
       <DiceRolls/>
       <LoginForm />
+      <GetPokemon />
     </>
   );
 }
