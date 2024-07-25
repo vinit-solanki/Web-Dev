@@ -1,5 +1,5 @@
 // greet.jsx
 import './Greet.css'
-export default function Greet() {
-    return (<h1 className="Greet">Hello, World!</h1>);
+export default function Greet(props) {
+    return (<h1 className="Greet">Hello, {props.name}!</h1>);
 } 

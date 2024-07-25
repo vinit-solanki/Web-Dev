@@ -1,0 +1,13 @@
+.box{
+    margin-top: 2rem;
+    border: 1px solid white;
+    border-radius: 2rem;
+    justify-content: center;
+}
+.box h2{
+    color: aliceblue;
+}
+.box button{
+    margin-left:1rem;
+    margin-bottom: 1rem;
+}
