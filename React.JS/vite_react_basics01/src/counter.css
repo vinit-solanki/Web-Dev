@@ -3,6 +3,7 @@
     border: 1px solid white;
     border-radius: 2rem;
     justify-content: center;
+    margin: 1rem;
 }
 .box h2{
     color: aliceblue;
