@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -35,8 +37,22 @@
 
 .card {
   padding: 2em;
+  justify-content: center;
+  align-items: center;
 }
 
 .read-the-docs {
   color: #888;
+}
+h1{
+  background-color: rgb(7, 127, 164);
+}
+.inline-flex{
+/* background: rgb(241,3,216);
+background: linear-gradient(90deg, rgba(241,3,216,1) 0%, rgba(238,14,14,1) 4%, rgba(222,0,255,1) 100%); */
+background-color: #3d3d3d6b;
+gap: 1rem;
+}
+.inline-flex button{
+  border-radius: 1rem;
 }
