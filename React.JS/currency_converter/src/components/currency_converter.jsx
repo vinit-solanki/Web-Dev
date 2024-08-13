@@ -47,7 +47,7 @@ function CurrencyConverter() {
   };
   
   const DropDown = ({ value, onChange }) => (
-    <select value={value} onChange={onChange} style={{ backgroundColor: "gray", opacity: "0.7", padding: "0.5rem 1rem", alignSelf: "center", color: "black", borderRadius: "1rem" }}>
+    <select value={value} onChange={onChange} style={{ backgroundColor: "gray", opacity: "0.7", padding: "0.5rem 1rem", alignSelf: "center", color: "black", borderRadius: "0.5rem" ,marginTop:"2rem"}}>
       {Object.keys(currencies).map((currency) => (
         <option key={currency} value={currency}>
           {currency}
@@ -58,7 +58,7 @@ function CurrencyConverter() {
 
   return (
     <div
-      className="text-white font-bold w-full max-w-md mt-5 bg-green-600 bg-opacity-20 rounded-md p-3 px-4 border-2"
+      className="text-white font-bold w-full max-w-md mt-5 bg-green-600 bg-opacity-20 rounded-md p-3 px-4 shadow-lg shadow-black"
       style={{ fontFamily: "Arial,sans-serif" }}
     >
       <div
@@ -86,7 +86,7 @@ function CurrencyConverter() {
       </div>
       <div className="w-full align-center justify-center text-center">
         <button
-          className="flex-shrink-0 bg-yellow-800 hover:bg-yellow-700 border-yellow-500 hover:border-yellow-700 text-sm text-white py-2 px-4 rounded"
+          className="flex-shrink-0 bg-yellow-800 hover:bg-yellow-700 border-yellow-500 hover:border-yellow-700 text-md text-white py-2 px-7 rounded-lg"
           type="button"
           onClick={() => {
             swapCurrencies();
@@ -123,7 +123,7 @@ function CurrencyConverter() {
         onClick={convertCurrency}
         className="mr-2 mb-3 mt-5 w-full bg-yellow-700 text-white shadow-lg py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-400 text-bold italic"
       >
-        Convert Currency
+        Convert Currency from {fromCurrency} to {toCurrency}
       </button>
     </div>
   );
