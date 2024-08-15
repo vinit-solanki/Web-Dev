@@ -1,0 +1,77 @@
+span a{
+    text-decoration: none;
+}
+span a:hover{
+    color: aliceblue;
+    text-decoration: underline;
+}
+#name{
+ animation: slideUp 1s ease-in-out;   
+}
+#header{
+    animation: slideDown 2s ease-in;
+    position: absolute;
+}
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+.gradient-border {
+    width: 100%;
+    height: 4px; /* Adjust height based on your design */
+    border: 2px solid transparent;
+    border-radius: 8px; /* Adjust border radius as needed */
+    background: linear-gradient(45deg, #f70303, #fcfbf9); /* Gradient colors */
+    background-clip: padding-box; /* Ensures gradient does not cover the padding */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Creates the border effect */
+  }
+  
+  
+  
+@keyframes slideUp {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }    
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideDown {
+    from{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to{
+        transform: 100px;
+        opacity: 1;
+    }
+    
+}
+@media (max-width:780px) {
+    h2{
+        display: inline-block;
+    }    
+    button{
+        display: none;
+    }
+}
+@keyframes slideRight {
+    from{
+        transform: translateX(-100);
+        opacity: 0;
+    }    
+    to{
+        transform: translateX(100);
+        opacity: 1;
+    }
+}
