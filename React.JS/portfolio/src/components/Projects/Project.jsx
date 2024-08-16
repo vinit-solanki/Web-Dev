@@ -1,7 +1,7 @@
 import React from 'react'
 import './Project.css'
 function Project({ topImg, title, github_id }) {
-    const img_path = `src/assets/${topImg}.png`;
+    const img_path = `/assets/${topImg}.png`;
     const github_path = `https://github.com/vinit-solanki/Web-Dev/tree/main/${github_id}`;
     return (
         <div id='border' className='flex flex-col max-w-sm rounded overflow-hidden shadow-lg '>

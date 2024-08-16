@@ -7,11 +7,11 @@ function Contact() {
       <div  className="w-full max-w-4xl bg-black flex flex-col justify-center items-center gap-4 p-4 rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold text-white">Connect with me.</h1>
         <div id="links" className="flex flex-row gap-3 bg-gray-600 p-2 rounded-2xl">
-          <a id="icon-link" href="https://github.com/vinit-solanki/" style={{width:"50px", height:"50px"}}><img src="src/assets/icons8-github-96.png" alt="" /></a>
-          <a id="icon-link" href="https://www.linkedin.com/in/vinit-solanki-ba091127b/" style={{width:"50px", height:"50px"}}><img src="src/assets/icons8-linkedin-100.png" alt="" /></a>
-          <a id="icon-link" href="https://leetcode.com/u/VinitSolanki05/" style={{width:"50px", height:"50px"}}><img src="src/assets/leetcode-icon.png" alt="" /></a>
-          <a id="icon-link" href="https://x.com/VINITSOLAN82916" style={{width:"50px", height:"50px"}}><img src="src/assets/icons8-x-90.png" alt="" /></a>
-          <a id="icon-link" href="https://www.instagram.com/notanerd_005/" style={{width:"50px", height:"50px"}}><img src="src/assets/icons8-instagram-96.png" alt="" /></a>
+          <a id="icon-link" href="https://github.com/vinit-solanki/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-github-96.png" alt="" /></a>
+          <a id="icon-link" href="https://www.linkedin.com/in/vinit-solanki-ba091127b/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-linkedin-100.png" alt="" /></a>
+          <a id="icon-link" href="https://leetcode.com/u/VinitSolanki05/" style={{width:"50px", height:"50px"}}><img src="/assets/leetcode-icon.png" alt="" /></a>
+          <a id="icon-link" href="https://x.com/VINITSOLAN82916" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-x-90.png" alt="" /></a>
+          <a id="icon-link" href="https://www.instagram.com/notanerd_005/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-instagram-96.png" alt="" /></a>
         </div>
         <div className="w-full max-w-md bg-white p-6 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
           <form className="space-y-4">

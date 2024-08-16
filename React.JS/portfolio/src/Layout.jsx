@@ -8,7 +8,7 @@ import Contact from './components/Contact/Contact';
 
 function Layout() {
   return (
-    <>
+    <div className='w-full h-screen'>
       <Header />
       <div id="home">
         <Home />
@@ -23,7 +23,7 @@ function Layout() {
         <Contact />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
