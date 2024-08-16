@@ -2,18 +2,21 @@ import React from 'react'
 import Project from './Project'
 function Projects() {
   return (
-    <div className='w-full min-h-screen bg-black flex items-start justify-start p-2'>
-        <div className='flex flex-col md:flex-col items-center justify-start bg-black shadow-lg rounded-lg max-w-6xl mx-4 md:mx-8 gap-y-10'>
-            <h1 className='font-bold'>Projects</h1>
-            <div className='grid grid-cols-3 max-w-full gap-4'>
-                <Project topImg={"currency_converter"} title="Currency Converter"/>
-                <Project topImg={"weather_app"} title="Real Time Weather Web App"/>
-                <Project topImg={"fy"} title="Fragrance Yard Perfumes"/>
-                <Project topImg={"netflix_ui"} title="Netflix.in Landing Pages"/>
-                <Project topImg={"lgg"} title="Linear Gradient Generator"/>
-                <Project topImg={"todo"} title="Simple Todo List"/>
-            </div>
-        </div>
+    <div id='project-container' className='w-full min-h-screen bg-black flex items-start justify-start '>
+        <div className='min-h-screen flex flex-col items-center justify-center bg-black'>
+  <div className='flex flex-col md:flex-col items-center justify-center bg-black shadow-lg rounded-lg max-w-6xl mx-4 md:mx-8 gap-y-10'>
+    <h1 id='projects-heading' className='font-bold text-white'>Projects</h1>
+    <div id='project' className='grid grid-cols-3 max-w-full gap-4 justify-center items-center'>
+      <Project topImg={"currency_converter"} title="Currency Converter" github_id={"React.JS/currency_converter"}/>
+      <Project topImg={"weather_app"} title="Real Time Weather Web App" github_id={"/weather_app"}/>
+      <Project topImg={"fy"} title="Fragrance Yard Perfumes" github_id={"Mini-Projects/fregrance_yard"}/>
+      <Project topImg={"netflix_ui"} title="Netflix.in Landing Pages" github_id={"Mini-Projects/project2"}/>
+      <Project topImg={"lgg"} title="Linear Gradient Generator" github_id={"Mini-Projects/js-based-projects/gradient_generator.html"}/>
+      <Project topImg={"todo"} title="Simple Todo List" github_id={"Mini-Projects/js-based-projects/"}/>
+    </div>
+  </div>
+</div>
+
     </div>
   )
 }

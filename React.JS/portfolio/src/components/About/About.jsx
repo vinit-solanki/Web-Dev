@@ -8,7 +8,7 @@ function About() {
     <div id='main' className='w-full h-82 flex flex-row items-center justify-start bg-black p-3'>
         <div className='w-full flex flex-col md:flex-col items-center justify-start shadow-lg rounded-lg max-w-lg gap-2 flex-shirnk-0'>
          <h2 className='italic'>Skills I Know For Now</h2>
-         <div className='grid grid-cols-4 gap-4'>
+         <div className='grid grid-cols-4 gap-4 ml-7'>
          <Card source={"html5lg"}/>
          <Card source={"css"}/>
          <Card source={"icons8-bootstrap-logo-480"}/>

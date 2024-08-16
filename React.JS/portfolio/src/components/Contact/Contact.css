@@ -1,0 +1,36 @@
+#icon-link {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+/* 1st Element */
+#icon-link:nth-child(1):hover {
+    transform: rotateX(-10deg) rotateY(15deg);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 2nd Element */
+  #icon-link:nth-child(2):hover {
+    transform: rotateX(10deg) rotateY(-15deg);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 3rd Element */
+  #icon-link:nth-child(3):hover {
+    transform: rotateX(-15deg) rotateY(10deg) rotateZ(5deg);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 4th Element */
+  #icon-link:nth-child(4):hover {
+    transform: rotateX(15deg) rotateY(-10deg) rotateZ(-5deg);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 5th Element */
+  #icon-link:nth-child(5):hover {
+    transform: rotateX(-20deg) rotateY(20deg);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  }
