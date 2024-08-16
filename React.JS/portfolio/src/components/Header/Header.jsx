@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <div id='header' className='sticky top-0 w-full bg-black text-white shadow-md z-50'>
-      <div className='flex items-center justify-between p-2 md:px-6'>
+      <div className='w-full flex items-center justify-between p-2 md:px-6'>
         <div className='flex items-center'>
           <h2 id='name_navbar' className='text-xl font-bold '>
             Vinit Solanki<span className='text-red-500'>.</span>
