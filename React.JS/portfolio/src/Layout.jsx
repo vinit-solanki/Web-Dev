@@ -5,23 +5,23 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
-
+import './index.css';
 function Layout() {
   return (
     <div className='w-full h-screen'>
       <Header />
-      <div id="home">
+      <div id="home" className='w-full h-screen'>
         <Home />
       </div>
-      <div id="about">
+      <div id="about" className='w-full h-screen'>
         <About />
       </div>
-      <div id="projects">
+      <div id="projects" className='w-full h-screen'>
         <Projects />
       </div>
-      <div id="contact">
+      <div id="contact" className='w-full h-screen'>
         <Contact />
-      </div>
+      </div >
       <Footer />
     </div>
   );
