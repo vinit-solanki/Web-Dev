@@ -3,7 +3,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div id="relative contact-container" className="relative w-full h-100 bg-black flex flex-col items-center justify-center ">
+    <div id="relative contact-container" className="relative w-full h-screen bg-black flex flex-col items-center justify-center p-3">
       <div  className="relative h-screen w-full bg-black flex flex-col justify-center items-center gap-4  rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold text-white">Connect with me.</h1>
         <div id="links" className="flex flex-row gap-3 bg-gray-600 p-2 rounded-2xl">
