@@ -4,7 +4,7 @@ import './Project.css'
 
 function Projects() {
   return (
-    <div id='project-container' className='relative w-full h-screen bg-black flex flex-col items-center justify-start p-4 '>
+    <div id='project-container' className='relative w-full h-screen bg-black flex flex-col items-center justify-center p-4 '>
       <div className='relative w-full h-screen flex flex-col md:flex-col items-center justify-center bg-black shadow-lg rounded-lg max-w-6xl mx-4 md:mx-8 gap-y-10'>
         <h1 id='projects-heading' className='font-bold text-white'>Projects</h1>
         <div id='project' className='grid grid-cols-3 max-w-full gap-4 justify-center items-center'>
