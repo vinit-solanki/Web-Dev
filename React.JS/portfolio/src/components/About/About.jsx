@@ -20,7 +20,7 @@ function About() {
          </div>
         </div>
          <Lottie animationData={AboutVideo}
-            className="max-w-xs md:max-w-md max-h-xs md:max-h-md"/>
+            className="max-w-md md:max-w-md max-h-md md:max-h-md"/>
     </div>
   )
 }
