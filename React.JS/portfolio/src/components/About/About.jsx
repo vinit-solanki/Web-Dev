@@ -19,8 +19,7 @@ function About() {
          <Card source={"icons8-numpy-480"}/>
          </div>
         </div>
-         <Lottie animationData={AboutVideo}
-            className="max-w-xs md:max-w-md max-h-xs md:max-h-md"/>
+         <Lottie animationData={AboutVideo}/>
     </div>
   )
 }
