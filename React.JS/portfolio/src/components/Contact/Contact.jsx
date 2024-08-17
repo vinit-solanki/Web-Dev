@@ -3,23 +3,30 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div id="relative contact-container" className="relative w-full h-screen bg-black flex flex-col items-center justify-center p-3">
-      <div  className="relative h-screen w-full bg-black flex flex-col justify-center items-center gap-4  rounded-lg shadow-lg">
+    <div className="relative contact-container w-full h-screen bg-black flex flex-col items-center justify-center p-3 pb-0">
+      <div className="relative h-screen w-full bg-black flex flex-col justify-center items-center gap-4 rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold text-white">Connect with me.</h1>
         <div id="links" className="flex flex-row gap-3 bg-gray-600 p-2 rounded-2xl">
-          <a id="icon-link" href="https://github.com/vinit-solanki/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-github-96.png" alt="" /></a>
-          <a id="icon-link" href="https://www.linkedin.com/in/vinit-solanki-ba091127b/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-linkedin-100.png" alt="" /></a>
-          <a id="icon-link" href="https://leetcode.com/u/VinitSolanki05/" style={{width:"50px", height:"50px"}}><img src="/assets/leetcode-icon.png" alt="" /></a>
-          <a id="icon-link" href="https://x.com/VINITSOLAN82916" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-x-90.png" alt="" /></a>
-          <a id="icon-link" href="https://www.instagram.com/notanerd_005/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-instagram-96.png" alt="" /></a>
+          <a className="icon-link" href="https://github.com/vinit-solanki/" style={{ width: "50px", height: "50px" }}>
+            <img src="/assets/icons8-github-96.png" alt="GitHub" />
+          </a>
+          <a className="icon-link" href="https://www.linkedin.com/in/vinit-solanki-ba091127b/" style={{ width: "50px", height: "50px" }}>
+            <img src="/assets/icons8-linkedin-100.png" alt="LinkedIn" />
+          </a>
+          <a className="icon-link" href="https://leetcode.com/u/VinitSolanki05/" style={{ width: "50px", height: "50px" }}>
+            <img src="/assets/leetcode-icon.png" alt="LeetCode" />
+          </a>
+          <a className="icon-link" href="https://x.com/VINITSOLAN82916" style={{ width: "50px", height: "50px" }}>
+            <img src="/assets/icons8-x-90.png" alt="X (formerly Twitter)" />
+          </a>
+          <a className="icon-link" href="https://www.instagram.com/notanerd_005/" style={{ width: "50px", height: "50px" }}>
+            <img src="/assets/icons8-instagram-96.png" alt="Instagram" />
+          </a>
         </div>
-        <div className="w-full max-w-md bg-white p-6 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+        <div className="w-full max-w-md bg-white p-6 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <form className="space-y-4">
             <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
+              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Your email
               </label>
               <input
@@ -33,16 +40,13 @@ function Contact() {
             </div>
 
             <div>
-              <label
-                htmlFor="message"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
+              <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Your message
               </label>
               <textarea
                 id="message"
                 rows="4"
-                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your thoughts here..."
                 required
               ></textarea>
