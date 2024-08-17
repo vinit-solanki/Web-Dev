@@ -5,7 +5,7 @@ import Card from './Card'
 import './About.css'
 function About() {
   return (
-    <div id='main' className='w-full h-screen flex flex-row items-center justify-center bg-black p-3'>
+    <div id='main' className='w-full h-screen flex flex-row items-start justify-center bg-black p-3'>
         <div className='w-full flex flex-col md:flex-col items-center justify-center shadow-lg rounded-lg max-w-lg gap-2 flex-shirnk-0'>
          <h2 className='italic'>Skills I Know For Now</h2>
          <div className='grid grid-cols-4 gap-4 ml-7'>

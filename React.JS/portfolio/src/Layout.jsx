@@ -8,7 +8,7 @@ import Contact from './components/Contact/Contact';
 import './index.css';
 function Layout() {
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full h-screen m-0 p-0'>
       <Header />
       <div id="home" className='w-full h-screen'>
         <Home />
