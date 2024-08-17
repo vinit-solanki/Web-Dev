@@ -3,8 +3,8 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div id="contact-container" className="w-full min-h-screen bg-black flex flex-col items-center justify-center p-4 mt-4 mb-0">
-      <div  className="w-full max-w-4xl bg-black flex flex-col justify-center items-center gap-4 p-4 rounded-lg shadow-lg">
+    <div id="relative contact-container" className="relative w-full h-100 bg-black flex flex-col items-center justify-center ">
+      <div  className="relative h-screen w-full bg-black flex flex-col justify-center items-center gap-4  rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold text-white">Connect with me.</h1>
         <div id="links" className="flex flex-row gap-3 bg-gray-600 p-2 rounded-2xl">
           <a id="icon-link" href="https://github.com/vinit-solanki/" style={{width:"50px", height:"50px"}}><img src="/assets/icons8-github-96.png" alt="" /></a>
