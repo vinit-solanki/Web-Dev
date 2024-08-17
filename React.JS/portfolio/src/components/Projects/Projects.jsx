@@ -1,13 +1,13 @@
-import React from 'react';
-import Project from './Project';
-import './Project.css'; 
+import React from 'react'
+import Project from './Project'
+import './Project.css'
 
 function Projects() {
   return (
-    <div className='project-container'>
-      <div className='projects-wrapper'>
-        <h1 className='projects-heading'>Projects</h1>
-        <div className='projects-grid'>
+    <div id='project-container' className='w-full h-screen bg-black flex items-center justify-center'>
+      <div className='flex flex-col md:flex-col items-center justify-center bg-black shadow-lg rounded-lg max-w-6xl mx-4 md:mx-8 gap-y-10'>
+        <h1 id='projects-heading' className='font-bold text-white'>Projects</h1>
+        <div id='project' className='grid grid-cols-3 max-w-full gap-4 justify-center items-center'>
           <Project topImg={"currency_converter"} title="Currency Converter" github_id={"React.JS/currency_converter"}/>
           <Project topImg={"weather_app"} title="Real Time Weather Web App" github_id={"/weather_app"}/>
           <Project topImg={"fy"} title="Fragrance Yard Perfumes" github_id={"Mini-Projects/fregrance_yard"}/>
@@ -17,7 +17,7 @@ function Projects() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
