@@ -13,7 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<><Navbar /><Loader /></>
+      element:<><Navbar /><Home /></>
     },
     {
       path:"/home", 
@@ -42,7 +42,7 @@ function App() {
   ])
   return (
     <>
-    <Loader/>
+    {/* <Loader/> */}
     <RouterProvider router={router}/>
     </>
   )
