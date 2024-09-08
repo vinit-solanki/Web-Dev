@@ -3,7 +3,10 @@ import './App.css';
 import Shopping_list from './Shopping_list.jsx';
 import Property from './Property.jsx';
 import Boxes from './Boxes.jsx';
+import EmojiClicker from './EmojiClicker.jsx';
+import Players from './Players.jsx';
 function App() {
+
   const [a, setA] = useState(0);
   const [on, setOn] = useState(true);
   const [title, setTitle] = useState("");
@@ -22,6 +25,8 @@ function App() {
     {name:"Siddharth Nagar", price:"3,000/sq. ft.", rating:3.5, id:3},
     {name:"City Of Joy", price:"10,000/sq. ft.", rating:4.5,id:4},
   ]; 
+
+  const emoji = []
   // Password Generator
   const [length,setLength]=useState(8);
   const [uppercase, setUppercase] = useState(true);
@@ -54,6 +59,8 @@ function App() {
     navigator.clipboard.writeText(passwordRef.current.value);
     setCopied(true);
   },[password]);
+
+
   return (
     <main>
       <div className='bg-zinc-900 p-5 m-0 flex-column justify-center align-center'>
@@ -129,20 +136,11 @@ function App() {
             <label className='text-lg' for="symbol">Symbols</label>
             <input type="checkbox" id="numbers" name="numbers" value={numbers} onChange={(e)=>{setUppercase((prev)=>!prev)}}/>
             <label className='text-lg' for="numbers">Numbers</label>
-            
-            
-          </div>
+            </div>
          </div>
       </div>
-      <div style={{justifyContent:"center", alignItems:"center"}}>
-        {
-          emojies.map((e)=>(
-           <span key={e.id} style={{fontSize:"4rem"}}>{e.emoji}</span>   
-          )
-        )
-      }
-      <button style={{backgroundColor:"black", padding:"1rem"}}>Add Emoji</button>
-      </div>
+      <EmojiClicker/>
+      <Players num_of_players={5} target={4}/> 
     </main>
   );
 }
