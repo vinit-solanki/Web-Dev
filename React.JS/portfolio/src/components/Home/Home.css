@@ -1,0 +1,90 @@
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(45deg, #60A5FA, #3B82F6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Floating animation for Lottie */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Social links styling */
+.social-link {
+  padding: 0.5rem 1rem;
+  border: 2px solid #3B82F6;
+  border-radius: 0.5rem;
+  color: #3B82F6;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #3B82F6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Typing animation */
+.typing-container h1 {
+  overflow: hidden;
+  border-right: 3px solid #3B82F6;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end),
+             blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3B82F6 }
+}
+
+/* Gradient background */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Hover effect for text */
+.hover-text-glow:hover {
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Animation delays */
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .typing-container h1 {
+    font-size: 2rem;
+    animation: none;
+    border-right: none;
+  }
+} 

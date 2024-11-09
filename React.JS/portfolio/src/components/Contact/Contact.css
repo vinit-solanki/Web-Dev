@@ -1,33 +1,212 @@
-/* Custom styles for icon-link */
-#icon-link {
+/* Container Styles */
+.contact-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading Styles */
+.heading-glow {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+}
+
+/* Social Links Container */
+.social-links-container {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.social-links-container:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Icon Link Styles */
+.icon-link {
+  position: relative;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   transform-style: preserve-3d;
   perspective: 1000px;
   cursor: pointer;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
 }
 
-/* Apply only if using custom transformations not covered by Tailwind */
-#icon-link:nth-child(1):hover {
-  transform: rotateX(-10deg) rotateY(15deg);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+.icon-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
 }
 
-#icon-link:nth-child(2):hover {
-  transform: rotateX(10deg) rotateY(-15deg);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+.icon-link:hover::before {
+  transform: translateX(100%);
 }
 
-#icon-link:nth-child(3):hover {
-  transform: rotateX(-15deg) rotateY(10deg) rotateZ(5deg);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+/* Individual icon hover effects */
+.icon-link:nth-child(1):hover { transform: rotateX(-10deg) rotateY(15deg); }
+.icon-link:nth-child(2):hover { transform: rotateX(10deg) rotateY(-15deg); }
+.icon-link:nth-child(3):hover { transform: rotateX(-15deg) rotateY(10deg) rotateZ(5deg); }
+.icon-link:nth-child(4):hover { transform: rotateX(15deg) rotateY(-10deg) rotateZ(-5deg); }
+.icon-link:nth-child(5):hover { transform: rotateX(-20deg) rotateY(20deg); }
+
+/* Social Icon Styles */
+.social-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  transition: transform 0.3s ease;
 }
 
-#icon-link:nth-child(4):hover {
-  transform: rotateX(15deg) rotateY(-10deg) rotateZ(-5deg);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+.icon-link:hover .social-icon {
+  transform: scale(1.1);
 }
 
-#icon-link:nth-child(5):hover {
-  transform: rotateX(-20deg) rotateY(20deg);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+/* Form Container Styles */
+.form-container {
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.form-container:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Form Group Styles */
+.form-group {
+  opacity: 0;
+  animation: slideUp 0.5s ease forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.2s; }
+.form-group:nth-child(2) { animation-delay: 0.4s; }
+
+/* Input Field Styles */
+.input-field {
+  @apply bg-gray-700 border border-gray-600 text-white text-sm rounded-lg 
+         focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+         transition-all duration-300;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Submit Button Styles */
+.submit-button {
+  @apply w-full text-white bg-blue-600 hover:bg-blue-700 
+         focus:ring-4 focus:ring-blue-300 font-medium rounded-lg 
+         text-sm px-5 py-2.5 text-center transition-all duration-300;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.submit-button:hover::before {
+  transform: translateX(100%);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  .contact-container {
+    padding: 1rem;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .social-links-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .icon-link {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .form-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .submit-button {
+    margin-top: 1rem;
+    position: static;
+  }
+
+  .heading-glow {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+}
+
+/* Glass Effect */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Loading State */
+.form-container.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
